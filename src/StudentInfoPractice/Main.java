@@ -2,27 +2,26 @@ package StudentInfoPractice;
 
 public class Main {
 	public static void main(String[] args) {
-
-		LinkedList List = new LinkedList();
+		MyQueue List = new MyQueue();
 
 		StudentInfo student = new StudentInfo(1, "a");
-		List.addToFront(student);
+		List.enqueue(student);
 
 		student = new StudentInfo(2, "b");
-		List.addToFront(student);
+		List.enqueue(student);
 
 		student = new StudentInfo(3, "c");
-		List.addToFront(student);
+		List.enqueue(student);
 
 		student = new StudentInfo(4, "james");
-		List.addToRear(student);
+		List.enqueue(student);
 
-		List.removeFromRear();
+		List.dequeue();
 
-		List.printList();
+		List.peek();
 
-		// List.removeFromFront();
+		List.dequeue();
 
-		// List.printList();
+		List.peek();
 	}
 }

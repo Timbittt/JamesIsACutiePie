@@ -5,13 +5,14 @@ public class LinkedList {
     StudentInfo end = null;
     int numInList;
 
-    public static void LinkedList() {
-
-    }
+    // public static void LinkedList() {
+    // }
 
     public void addToFront(StudentInfo student) {
         student.link = front;
         front = student;
+
+        // System.out.printlnstudent)
     }   
 
     public void removeFromFront() {
@@ -20,7 +21,7 @@ public class LinkedList {
     
     public void addToRear(StudentInfo student) {
         if(front == null) {
-            System.out.println("List is empty.");
+            front = student; // TODO: fix u moron
             return;
         }
 
