@@ -2,8 +2,34 @@ package StudentInfoPractice;
 
 public class MyQueue {
     StudentInfo front = null;
-    int numInList;
+    int numInQueue;
 
+    public void displayQueue() {
+        StudentInfo student = front;
+
+        System.out.println("Printing all students:");
+
+        while (true) {
+            if (student == null) {
+                if (front == null) {
+                    System.out.println("List is empty");
+                }
+
+                System.out.println("+--------------------");
+
+                break;
+            }
+
+            System.out.println(
+                "+--------------------\n" +
+                "|Name: " + student.name + '\n' +
+                "|Student#: " + student.studentNumber
+            );
+
+            student = student.link;
+        }
+    }
+    
     public void dequeue() {
         front = front.link;
     }
@@ -26,11 +52,15 @@ public class MyQueue {
         }
     }
 
-    public void peek() {
-        System.out.println(
-            "-----------------------------------------------\n" +
-            "Student Number: " + front.studentNumber + "\n" +
-            "Name: " + front.name
-        );
+    public StudentInfo peek() {
+        return front;
+
+        // System.out.println(
+        //     "Printing top student:\n" +
+        //     "+-------------------+\n" +
+        //     "|Student Number: " + front.studentNumber + "\n" +
+        //     "|Name: " + front.name + '\n' +
+        //     "+-------------------+\n"
+        // );
     }
 }
